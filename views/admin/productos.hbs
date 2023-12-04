@@ -1,0 +1,40 @@
+<div class="cajonpadre">
+    <div class="titul">
+        <h4>Hola {{usuario}} </h4>
+        <button class="boton1" type="button" onclick="location.href='/admin/login/logout'">Cerrar Sesion</button>
+    </div>
+
+    <div class="titul">
+        <h2>Listado de Productos</h4>
+            <button class="boton2" type="button" onclick="location.href='/admin/productos/agregar'">Agregar</button>
+            <button class="boton2" type="button" onclick="location.href='/admin/navegador'">Volver</button>
+    </div>
+
+    <div class="product">
+        {{#each productos}}
+        <div class="contprod">
+            <div class="titulo2">
+                Titulo:{{titulo}}
+            </div>
+            <div class="prod">
+                {{#if img_id}}
+                    {{{imagen}}}
+                {{else}}
+                    <img class="prod "src="/images/sinimagen.jpg" alt="">
+                {{/if}}
+            </div>
+            <div class="precio">
+                Precio: {{precio}}
+            </div>
+            <div class="opciones">
+                <div>Opciones: <a href="/admin/productos/editar/{{id}}"><img class="editar"
+                            src="/images/editar.png"></a><a onclick="return confirm('¿Esta seguro que quiere borrar el producto')"href="/admin/productos/delete/{{id}}"><img class="borrar"
+                            src="/images/borrar.png"></a></div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+
+</div>

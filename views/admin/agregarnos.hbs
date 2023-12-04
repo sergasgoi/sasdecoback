@@ -1,0 +1,21 @@
+<div class="contenido">
+
+    <form action="/admin/nosotros/agregar" method="post" enctype="multipart/form-data">
+
+        <h3>Agregar a Nosotros</h3>
+
+        <input type="text" name="titulo" id="titulo" placeholder="Escriba el Titulo" />
+
+        <input class="imagen" type="file" name="imagen" id="imagen"/>
+
+        <input type="text" name="leyenda" id="leyenda" placeholder="Escriba la Leyenda" />
+
+        <button type="submit">Agregar</button>
+        <input class="boton3" type="button"onclick="window.location.href='/admin/nosotros'" value="Volver">
+
+    </form>
+    {{#if error}}
+        <p>{{message}}</p>
+    {{/if}}
+
+</div>

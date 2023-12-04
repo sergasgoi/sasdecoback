@@ -1,0 +1,40 @@
+<div class="cajonpadre">
+    <div class="titul">
+        <h4>Hola {{usuario}} </h4>
+        <button class="boton1" type="button" onclick="location.href='/admin/login/logout'">Cerrar Sesion</button>
+    </div>
+
+    <div class="titul">
+        <h2>Nosotros</h4>
+            <button class="boton2" type="button" onclick="location.href='/admin/nosotros/agregar'">Agregar</button>
+            <button class="boton2" type="button" onclick="location.href='/admin/navegador'">Volver</button>
+    </div>
+
+    <div class="nosotros">
+        {{#each nosotros}}
+        <div class="contnos">
+            <div class="titulo3">
+                Titulo: {{titulo}}
+            </div>
+            <div class="nos">
+                {{#if img_id}}
+                {{{imagen}}}
+                {{else}}
+                <img class="nos" src="/images/sinimagen.jpg" alt="">
+                {{/if}}
+            </div>
+            <div class="leyenda">
+                Leyenda: <p>{{leyenda}}</p>
+            </div>
+            <div class="opciones">
+                <div>Opciones: <a href="/admin/nosotros/editar/{{id}}"><img class="editar"
+                            src="/images/editar.png"></a><a
+                        onclick="return confirm('¿Esta seguro que quiere eliminarlo')"
+                        href="/admin/nosotros/delete/{{id}}"><img class="borrar" src="/images/borrar.png"></a></div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+
+</div>

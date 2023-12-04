@@ -1,0 +1,16 @@
+<div class="contenido">
+    <form action="/admin/login" method="post">
+    
+    <input type="text" name="usuario" id="inputUser" required="obligatorio" placeholder="Escribe tu nombre" />
+    
+    <input type="password" name="password" id="inputPassword" required="obligatorio" placeholder="Escribe tu Contraseña" />
+
+    <button type="submit"><p>Enviar</p></button>
+
+</form>
+
+{{#if error}}
+<p>Usuario y/o Contraseña Incorrecto/s</p>
+{{/if}}
+
+</div>

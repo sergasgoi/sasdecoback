@@ -1,0 +1,17 @@
+<div class="contenido">
+
+    <form action="/admin/inicio/agregar" method="post" enctype="multipart/form-data">
+
+        <h3>Agregar un Inicio</h3>
+        <input class="imagen" type="file" name="imagen" id="imagen"/>
+
+        <button type="submit">Agregar</button>
+        <input class="boton3" type="button"onclick="window.location.href='/admin/inicio'" value="Volver">
+
+
+    </form>
+    {{#if error}}
+        <p>{{message}}</p>
+    {{/if}}
+
+</div>

@@ -1,0 +1,28 @@
+<div class="contenido">
+
+    <form action="/admin/productos/editar" method="post" enctype="multipart/form-data">
+
+        <h3>Editar un Productos</h3>
+
+        <input type="hidden" name="id" value="{{data.id}}" id="id" />
+
+        <input type="text" name="titulo" id="inputTitulo" value="{{data.titulo}}"
+            placeholder="Coloque el nuevo Titulo" />
+
+        <input class="imagen" type="file" name="imagen" id="imagen" />
+        <input class="check" type="checkbox" name="img_delete" value="1" />
+        Eliminar imagen actual?
+        <input type="hidden" name="img_original" value="{{data.img_id}}" />
+
+        <input type="text" name="precio" id="inputPrecio" value="{{data.precio}}"
+            placeholder="Coloque el nuevo Precio" />
+
+        <button type="submit">Editar</button>
+        <button onclick="window.location.href='/'">Volver</button>
+
+    </form>
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+
+</div>
